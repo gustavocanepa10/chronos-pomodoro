@@ -2,16 +2,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2.4rem;
+    gap: 1.4rem;
     
 }
 
-.menu button {
-    background: var(--link-color);
+.menu a {
+    background-color: var(--primary);
     border-radius: 8px;
     padding: 6px;
     border-color: black;
+    width: 4.8rem;
+    height: 4.8rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     border: 2rem;
+    gap: 1rem;
+    cursor: pointer;
+    text-transform: none;
     
+}
+
+.menu a:hover {
+    
+    background-color:var(--link-hover);
+    transition: all .1s ease-in-out;
+    
+
 }
 
