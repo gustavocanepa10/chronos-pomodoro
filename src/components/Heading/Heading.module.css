@@ -1,0 +1,39 @@
+.heading a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 2,4rem;
+    text-decoration: none;
+    
+
+    
+}
+
+.heading a:hover {
+    color:var(--link-hover);
+    transition: all .1s ease-in-out;
+    filter: brightness(80%);
+}
+
+
+
+
+
+.heading span {
+    font-size: 4rem;
+    color: var(--primary);
+    font-weight: bold;
+    width: 24rem;
+    height: 24rem;
+    text-align: center;
+    
+    
+
+}
+
+
+

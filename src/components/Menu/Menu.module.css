@@ -1,0 +1,17 @@
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    
+}
+
+.menu button {
+    background: var(--link-color);
+    border-radius: 8px;
+    padding: 6px;
+    border-color: black;
+    border: 2rem;
+    
+}
+

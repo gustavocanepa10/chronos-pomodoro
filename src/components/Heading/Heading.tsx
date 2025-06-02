@@ -3,7 +3,7 @@ import styles from "./Heading.module.css";
 
 
 type HeadingProps = {
-    children : string
+    children : React.ReactNode
 }
 
 
@@ -11,9 +11,13 @@ export function Heading({children} : HeadingProps) {
     console.log(styles)
     
     return  <div className= {styles.heading}>
-        <h1 className= {styles.heading}>
+        
+            
+
+        
+        <div className= {styles.heading}>
              {children}
-        </h1>
+        </div>
        
        </div>
 }
