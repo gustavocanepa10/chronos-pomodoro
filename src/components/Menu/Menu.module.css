@@ -1,13 +1,15 @@
 .menu {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 1.4rem;
+    
     
 }
 
 .menu a {
     background-color: var(--primary);
+    color: var(--text-over-primary);
     border-radius: 8px;
     padding: 6px;
     border-color: black;

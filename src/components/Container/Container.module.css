@@ -3,11 +3,13 @@
 
 
 .container {
-    max-width: 98rem;
     padding: 3.2rem;
     margin: 3.2rem;
+    gap: 4.5rem;
+    flex-direction: column;
     display: flex;
-    align-items: center;
     justify-content: center;
+    
+    
     
 }

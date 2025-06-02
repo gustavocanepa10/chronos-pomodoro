@@ -1,21 +1,35 @@
-.heading a {
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    padding-top: 3.2rem;
+    
+
+}
+
+
+.logo a {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.4rem;
     cursor: pointer;
     width: 100%;
     margin-bottom: 2,4rem;
     text-decoration: none;
+    color: var(--primary);
     
 
     
 }
 
-.heading a:hover {
-    color:var(--link-hover);
-    transition: all .1s ease-in-out;
+.logo a:hover {
+    color: var(--link-hover);
+    transition: all 0.1s ease-in-out;
     filter: brightness(80%);
 }
 
@@ -23,7 +37,7 @@
 
 
 
-.heading span {
+.logo span {
     font-size: 4rem;
     color: var(--primary);
     font-weight: bold;
