@@ -1,6 +1,19 @@
 
+import styles from "./Heading.module.css";
 
 
-export function Heading() {
-    return  <h1 className="heading">App</h1>
+type HeadingProps = {
+    children : string
+}
+
+
+export function Heading({children} : HeadingProps) {
+    console.log(styles)
+    
+    return  <div className= {styles.heading}>
+        <h1 className= {styles.heading}>
+             {children}
+        </h1>
+       
+       </div>
 }
