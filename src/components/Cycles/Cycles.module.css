@@ -1,0 +1,58 @@
+
+
+.cycles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+
+}
+
+.cycles span {
+    font-size: 1.5rem;
+}
+
+.cycleDots{
+    display: flex;
+    gap: 0.5rem;
+
+
+}
+
+.cycleDot {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+
+}
+
+.rest {
+    
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--success);
+    border-radius: 50%;
+}
+
+
+.workTime {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--warning);
+    border-radius: 50%;
+
+}
+
+
+
+.longBreakTime {
+     width: 2rem;
+    height: 2rem;
+    background-color: var(--info);
+    border-radius: 50%;
+
+}
+
+

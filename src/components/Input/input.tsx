@@ -10,7 +10,7 @@ type InputProps = React.ComponentProps<"input"> & {
 export function Input({ id, labelText, ...rest }: InputProps) {
   return (
     <>
-      <label htmlFor="input">{labelText}</label>
+      <label className= {styles.label} htmlFor="input">{labelText}</label>
 
       <input className= {styles.input} {...rest} id="input" />
     </>

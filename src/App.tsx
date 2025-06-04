@@ -4,9 +4,11 @@ import { Logo } from "./components/Logo/Logo";
 
 import { Container } from "./components/Container/Container";
 import { Menu } from "./components/Menu/Menu";
-
+import { CirclePlayIcon, StopCircleIcon } from "lucide-react";
 import { CountDown } from "./components/CountDown/CountDown";
 import { Input } from "./components/Input/input";
+import { Cycles } from "./components/Cycles/Cycles";
+import { Button } from "./components/Button/Button";
 
 function App() {
   return (
@@ -20,17 +22,23 @@ function App() {
 
         <form className="form" action="">
           <div className="formRow">
-            <Input placeholder="Ex : estudar para a prova" labelText="task" id="input" type="string" />
+            <Input  placeholder="Ex : estudar para a prova" labelText="task" id="input" type="string" />
           </div>
           <div className="formRow">Lorem ipsum dolor sit amet.</div>
 
           <div className="formRow">
-            <p>Ciclos</p>
-            <p>000000</p>
+           <Cycles/>
           </div>
 
           <div className="formRow">
-            <button>Enviar</button>
+           <Button  type="submit">
+            <CirclePlayIcon  size={32}/>
+            
+           </Button>
+            <Button color="red"  type="submit">
+            <StopCircleIcon  size={32}/>
+            
+           </Button>
           </div>
         </form>
       </Container>
