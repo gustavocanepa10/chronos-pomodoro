@@ -1,45 +1,65 @@
 import "./styles/theme.css";
 import "./styles/global.css";
-import { Heading } from "./components/Heading/Heading";
-import {
-  HistoryIcon,
-  HomeIcon,
-  SettingsIcon,
-  SunIcon,
-  TimerIcon,
-} from "lucide-react";
+import { Logo } from "./components/Logo/Logo";
+
 import { Container } from "./components/Container/Container";
 import { Menu } from "./components/Menu/Menu";
-import { Content } from "./components/Content/Content";
+
+import { CountDown } from "./components/CountDown/CountDown";
+import { Input } from "./components/Input/input";
 
 function App() {
   return (
+    <>
     <Container>
-      <Content>
-        <Heading>
-          <a>
-            <TimerIcon size={64} color="#10b981" />
+      
+        <Logo/>
+      
+          
+       
+     
+        <Menu/>
 
-            <span>Chronos</span>
-          </a>
-        </Heading>
+      
 
-        <Menu>
-          <a>
-            <HistoryIcon color="#000" />
-          </a>
-          <a>
-            <HomeIcon color="#000" />
-          </a>
-          <a>
-            <SettingsIcon color="#000" />
-          </a>
-          <a>
-            <SunIcon color="#000" />
-          </a>
-        </Menu>
-      </Content>
+      
+        <CountDown/>
+
+
+
+        <form className="form" action="">
+          <div className="formRow">
+           <Input type="number"/>
+          </div>
+          <div className="formRow">
+            Lorem ipsum dolor sit amet.
+          </div>
+
+          <div className="formRow">
+            <p>Ciclos</p>
+            <p>000000</p>
+            
+
+          </div>
+
+          <div className="formRow"> 
+            <button>
+              Enviar
+            </button>
+          </div>
+
+        </form>
+
+      
+        
+
+        
+          
+        
+      
     </Container>
+    </>
+    
   );
 }
 
