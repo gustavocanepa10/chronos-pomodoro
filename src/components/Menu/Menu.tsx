@@ -1,21 +1,50 @@
+import { useState, useEffect } from "react";
 import styles from "./Menu.module.css";
 
 import { HistoryIcon, HomeIcon, SettingsIcon, SunIcon } from "lucide-react";
 
+type themesProps = 'dark' | 'light'
+
+
+
 export function Menu() {
+  const [theme, setTheme] = useState<themesProps>('dark')
+
+  
+
+  function handleTheme(event : React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+    event.preventDefault()
+    setTheme(prevTheme => {
+      const nextTheme = prevTheme === 'dark' ? 'light' : 'dark'
+      return nextTheme;
+
+    })
+    
+
+  }
+
+  useEffect(() => {
+
+    document.documentElement.setAttribute("data-theme" ,  theme)
+
+  }, [theme])
+
+
+
   return (
     <nav className={styles.menu}>
-      <a href="#">
-        <HistoryIcon color="#000" />
+      
+      <a href="#" aria-label="Ir para a home" title = "Home">
+        <HomeIcon color="#000"  />
       </a>
-      <a href="#">
-        <HomeIcon color="#000" />
+      <a href="#" aria-label="Ver histórico" title = "Histórico">
+        < HistoryIcon color="#000"   />
       </a>
-      <a href="#">
-        <SettingsIcon color="#000" />
+      <a href="#" aria-label="Configurações" title = "Configurações">
+        <SettingsIcon color="#000"  />
       </a>
-      <a href="#">
-        <SunIcon color="#000" />
+      <a href="#"  onClick={handleTheme} aria-label="Mudar de tema" title = "Tema">
+        <SunIcon  color="#000" />
       </a>
     </nav>
   );

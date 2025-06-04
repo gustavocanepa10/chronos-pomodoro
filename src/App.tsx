@@ -9,6 +9,7 @@ import { CountDown } from "./components/CountDown/CountDown";
 import { Input } from "./components/Input/input";
 import { Cycles } from "./components/Cycles/Cycles";
 import { Button } from "./components/Button/Button";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
 
         <form className="form" action="">
           <div className="formRow">
-            <Input  placeholder="Ex : estudar para a prova" labelText="task" id="input" type="string" />
+            <Input  placeholder="Ex : estudar para a prova" labelText="task :" id="input" type="string" />
           </div>
           <div className="formRow">Lorem ipsum dolor sit amet.</div>
 
@@ -35,12 +36,14 @@ function App() {
             <CirclePlayIcon  size={32}/>
             
            </Button>
-            <Button color="red"  type="submit">
+            {/* <Button color="red"  type="submit">
             <StopCircleIcon  size={32}/>
             
-           </Button>
+           </Button> */}
           </div>
         </form>
+
+        <Footer/>
       </Container>
     </>
   );
