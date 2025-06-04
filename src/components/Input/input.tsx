@@ -1,22 +1,18 @@
 
-type InputProps = {
-    type : string
-    
+import styles from "./input.module.css"
 
-}
 
-export function Input({type}: InputProps) {
-    return  (
-        <>
-          <label htmlFor="input">
-              task
-            </label>
-            <input type= {type} id="input" />
-        </>
-        
-          
-        
+type InputProps = React.ComponentProps<"input"> & {
+  id: string;
+  labelText: string;
+};
 
-    )
-    
+export function Input({ id, labelText, ...rest }: InputProps) {
+  return (
+    <>
+      <label htmlFor="input">{labelText}</label>
+
+      <input className= {styles.input} {...rest} id="input" />
+    </>
+  );
 }

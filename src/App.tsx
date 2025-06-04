@@ -11,55 +11,30 @@ import { Input } from "./components/Input/input";
 function App() {
   return (
     <>
-    <Container>
-      
-        <Logo/>
-      
-          
-       
-     
-        <Menu/>
+      <Container>
+        <Logo />
 
-      
+        <Menu />
 
-      
-        <CountDown/>
-
-
+        <CountDown />
 
         <form className="form" action="">
           <div className="formRow">
-           <Input type="number"/>
+            <Input placeholder="Ex : estudar para a prova" labelText="task" id="input" type="string" />
           </div>
-          <div className="formRow">
-            Lorem ipsum dolor sit amet.
-          </div>
+          <div className="formRow">Lorem ipsum dolor sit amet.</div>
 
           <div className="formRow">
             <p>Ciclos</p>
             <p>000000</p>
-            
-
           </div>
 
-          <div className="formRow"> 
-            <button>
-              Enviar
-            </button>
+          <div className="formRow">
+            <button>Enviar</button>
           </div>
-
         </form>
-
-      
-        
-
-        
-          
-        
-      
-    </Container>
+      </Container>
     </>
-    
   );
 }
 
