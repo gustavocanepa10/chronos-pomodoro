@@ -39,7 +39,7 @@ export function Menu() {
   return (
     <nav className={styles.menu}>
       
-      <a href="#" aria-label="Ir para a home" title = "Home">
+      <a href="/" aria-label="Ir para a home" title = "Home">
         <HomeIcon color="#000"  />
       </a>
       <a href="#" aria-label="Ver histórico" title = "Histórico">
