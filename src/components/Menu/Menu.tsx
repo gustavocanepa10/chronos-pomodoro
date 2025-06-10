@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
 import styles from "./Menu.module.css";
 
-import { HistoryIcon, HomeIcon, SettingsIcon, SunIcon } from "lucide-react";
+import { HistoryIcon, HomeIcon, MoonIcon, SettingsIcon, SunIcon } from "lucide-react";
 
 type themesProps = 'dark' | 'light'
 
 
 
 export function Menu() {
-  const [theme, setTheme] = useState<themesProps>('dark')
+  const [theme, setTheme] = useState<themesProps>(() => {
+    const storageTheme = localStorage.getItem('theme') as themesProps || 'dark'
+
+    return storageTheme
+  })
 
   
 
@@ -26,6 +30,7 @@ export function Menu() {
   useEffect(() => {
 
     document.documentElement.setAttribute("data-theme" ,  theme)
+    localStorage.setItem('theme', theme)
 
   }, [theme])
 
@@ -44,7 +49,10 @@ export function Menu() {
         <SettingsIcon color="#000"  />
       </a>
       <a href="#"  onClick={handleTheme} aria-label="Mudar de tema" title = "Tema">
-        <SunIcon  color="#000" />
+      {theme === "dark" ?  <SunIcon  color="#000" /> : <MoonIcon/> }
+
+
+       
       </a>
     </nav>
   );

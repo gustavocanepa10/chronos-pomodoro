@@ -4,7 +4,7 @@ import { Logo } from "./components/Logo/Logo";
 
 import { Container } from "./components/Container/Container";
 import { Menu } from "./components/Menu/Menu";
-import { CirclePlayIcon, StopCircleIcon } from "lucide-react";
+import { CirclePlayIcon } from "lucide-react";
 import { CountDown } from "./components/CountDown/CountDown";
 import { Input } from "./components/Input/input";
 import { Cycles } from "./components/Cycles/Cycles";
